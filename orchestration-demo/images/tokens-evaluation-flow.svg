@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="260" viewBox="0 0 1320 260" role="img" aria-labelledby="title desc">
+  <title id="title">Candidate generation and evaluation flow</title>
+  <desc id="desc">A horizontal flow from user prompt through candidate generation, evaluation, ranking, and best output.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173b63"/>
+      <stop offset="100%" stop-color="#10263f"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#573018"/>
+      <stop offset="100%" stop-color="#27170f"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173f24"/>
+      <stop offset="100%" stop-color="#102217"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#35214f"/>
+      <stop offset="100%" stop-color="#1b132a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.36"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#8b949e"/>
+    </marker>
+    <style>
+      .label { font-family: Inter, Helvetica, Arial, sans-serif; fill: #e6edf3; font-weight: 700; font-size: 30px; }
+      .sub { font-family: Inter, Helvetica, Arial, sans-serif; fill: #9ca3af; font-weight: 500; font-size: 19px; }
+      .kicker { font-family: Inter, Helvetica, Arial, sans-serif; fill: #79c0ff; font-weight: 700; font-size: 17px; letter-spacing: 2px; }
+      .node { stroke-width: 2.5; filter: url(#shadow); }
+      .arrow { stroke: #8b949e; stroke-width: 4; marker-end: url(#arrow); stroke-linecap: round; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <rect width="1320" height="260" rx="24" fill="url(#bg)" stroke="#30363d"/>
+  <circle cx="116" cy="208" r="116" fill="#58a6ff" opacity="0.06"/>
+  <circle cx="1186" cy="54" r="140" fill="#f0883e" opacity="0.06"/>
+
+  <g transform="translate(36,42)">
+    <rect class="node" x="0" y="0" width="188" height="150" rx="20" fill="url(#blue)" stroke="#58a6ff"/>
+    <text class="kicker" x="24" y="38">INPUT</text>
+    <text class="label" x="24" y="80">User</text>
+    <text class="label" x="24" y="116">prompt</text>
+  </g>
+
+  <line class="arrow" x1="245" y1="117" x2="318" y2="117"/>
+
+  <g transform="translate(330,42)">
+    <rect class="node" x="0" y="0" width="250" height="150" rx="20" fill="url(#purple)" stroke="#d2a8ff"/>
+    <text class="kicker" x="24" y="38">FAN OUT</text>
+    <text class="label" x="24" y="80">Generate N</text>
+    <text class="label" x="24" y="116">candidates</text>
+    <circle cx="198" cy="45" r="8" fill="#d2a8ff"/>
+    <circle cx="220" cy="63" r="8" fill="#d2a8ff" opacity="0.86"/>
+    <circle cx="194" cy="85" r="8" fill="#d2a8ff" opacity="0.72"/>
+    <circle cx="223" cy="105" r="8" fill="#d2a8ff" opacity="0.58"/>
+  </g>
+
+  <line class="arrow" x1="600" y1="117" x2="673" y2="117"/>
+
+  <g transform="translate(685,42)">
+    <rect class="node" x="0" y="0" width="230" height="150" rx="20" fill="url(#orange)" stroke="#f0883e"/>
+    <text class="kicker" x="24" y="38">CHECK</text>
+    <text class="label" x="24" y="80">Evaluate</text>
+    <text class="sub" x="24" y="113">judge + tools</text>
+  </g>
+
+  <line class="arrow" x1="936" y1="117" x2="1009" y2="117"/>
+
+  <g transform="translate(1020,42)">
+    <rect class="node" x="0" y="0" width="230" height="150" rx="20" fill="url(#green)" stroke="#3fb950"/>
+    <text class="kicker" x="24" y="38">SELECT</text>
+    <text class="label" x="24" y="80">Rank, filter,</text>
+    <text class="label" x="24" y="116">refine</text>
+  </g>
+
+  <path class="arrow" d="M1135,202 C1135,235 1190,235 1190,205"/>
+
+  <g transform="translate(1072,203)">
+    <rect x="0" y="0" width="170" height="36" rx="18" fill="#102217" stroke="#3fb950" opacity="0.95"/>
+    <text class="sub" x="24" y="24" fill="#c9d1d9">Best output</text>
+  </g>
+</svg>

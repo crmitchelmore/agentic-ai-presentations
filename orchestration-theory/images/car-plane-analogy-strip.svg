@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="240" viewBox="0 0 1180 240" role="img" aria-labelledby="title desc">
+  <title id="title">Car to plane autonomy analogy</title>
+  <desc id="desc">Two pushers move a car on the left; a plane taxis along branching routes on the right.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="manual" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2238"/>
+      <stop offset="100%" stop-color="#070e1a"/>
+    </linearGradient>
+    <linearGradient id="autonomy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d130b"/>
+      <stop offset="100%" stop-color="#0a1424"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="190%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <style>
+      .label { font-family: Inter, Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 3.5px; fill: #79c0ff; font-size: 15px; }
+      .label.orange { fill: #f0883e; }
+      .stroke-blue  { stroke: #58a6ff; }
+      .stroke-amber { stroke: #f0883e; }
+    </style>
+  </defs>
+
+  <!-- panel -->
+  <rect x="6" y="6" width="1168" height="228" rx="28" fill="url(#panel)" stroke="#30363d" stroke-width="2"/>
+  <path d="M22 22h540l-78 200H22z" fill="url(#manual)"/>
+  <path d="M580 22h578v200H502z" fill="url(#autonomy)"/>
+  <path d="M572 12 488 230" stroke="#30363d" stroke-width="2"/>
+
+  <text x="78" y="50" class="label">MANUAL · APPROVE EVERY STEP</text>
+  <text x="640" y="50" class="label orange">AUTONOMOUS · DIRECTED</text>
+
+  <!-- LEFT: car + two pushers -->
+  <g transform="translate(80 96)" filter="url(#shadow)">
+    <!-- left pusher -->
+    <g>
+      <circle cx="14" cy="36" r="14" fill="#58a6ff"/>
+      <path d="M14 50 L14 92" stroke="#58a6ff" stroke-width="9" stroke-linecap="round"/>
+      <path d="M14 64 L46 84" stroke="#58a6ff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M14 92 L4 118" stroke="#58a6ff" stroke-width="9" stroke-linecap="round"/>
+      <path d="M14 92 L26 118" stroke="#58a6ff" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <!-- car -->
+    <g transform="translate(54 22)">
+      <path d="M28 70 C44 38 76 26 142 30 L196 60 C220 62 244 78 252 96 L4 96 C8 82 16 76 28 70z"
+            fill="#1a2c47" stroke="#58a6ff" stroke-width="2.4" stroke-opacity="0.75"/>
+      <rect x="64" y="42" width="50" height="26" rx="6" fill="#0c1626" stroke="#79c0ff" stroke-opacity="0.55"/>
+      <rect x="120" y="44" width="46" height="24" rx="6" fill="#0c1626" stroke="#79c0ff" stroke-opacity="0.45"/>
+      <circle cx="56" cy="100" r="22" fill="#070b12" stroke="#8b949e" stroke-width="4"/>
+      <circle cx="200" cy="100" r="22" fill="#070b12" stroke="#8b949e" stroke-width="4"/>
+      <circle cx="56" cy="100" r="6" fill="#58a6ff" opacity="0.6"/>
+      <circle cx="200" cy="100" r="6" fill="#58a6ff" opacity="0.6"/>
+    </g>
+    <!-- right pusher -->
+    <g transform="translate(330 0)">
+      <circle cx="14" cy="36" r="14" fill="#f0883e"/>
+      <path d="M14 50 L14 92" stroke="#f0883e" stroke-width="9" stroke-linecap="round"/>
+      <path d="M14 64 L-22 84" stroke="#f0883e" stroke-width="8" stroke-linecap="round"/>
+      <path d="M14 92 L4 118" stroke="#f0883e" stroke-width="9" stroke-linecap="round"/>
+      <path d="M14 92 L26 118" stroke="#f0883e" stroke-width="9" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- arrow -->
+  <g transform="translate(498 124)">
+    <path d="M0 0 H80" stroke="#8b949e" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+    <path d="M68 -12 86 0 68 12" fill="none" stroke="#8b949e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  </g>
+
+  <!-- RIGHT: runway routes + plane -->
+  <g>
+    <path d="M620 200 C740 168 880 134 1080 96"  fill="none" stroke="#58a6ff" stroke-width="3.5" opacity="0.55" stroke-linecap="round"/>
+    <path d="M620 200 C760 200 900 192 1110 168" fill="none" stroke="#f0883e" stroke-width="3.5" opacity="0.55" stroke-linecap="round"/>
+    <path d="M620 200 C720 212 880 218 1090 210" fill="none" stroke="#3fb950" stroke-width="3"   opacity="0.45" stroke-linecap="round"/>
+    <g fill="#58a6ff"><circle cx="720" cy="178" r="4"/><circle cx="820" cy="156" r="4"/><circle cx="940" cy="128" r="4"/></g>
+    <g fill="#f0883e"><circle cx="780" cy="198" r="4"/><circle cx="900" cy="190" r="4"/><circle cx="1020" cy="180" r="4"/></g>
+    <g fill="#3fb950" opacity="0.85"><circle cx="800" cy="210" r="3.5"/><circle cx="950" cy="216" r="3.5"/></g>
+  </g>
+
+  <!-- plane (clean side profile, simple, no overlap) -->
+  <g transform="translate(770 100)" filter="url(#shadow)">
+    <!-- vertical stabilizer -->
+    <path d="M30 30 L48 0 L66 30 Z" fill="#16263d" stroke="#58a6ff" stroke-opacity="0.7" stroke-width="2"/>
+    <!-- main wing (single shape, behind fuselage) -->
+    <path d="M120 36 L156 8 L180 8 L172 36 Z" fill="#1a2c46" stroke="#58a6ff" stroke-opacity="0.6" stroke-width="2"/>
+    <!-- fuselage -->
+    <path d="M0 36 C0 26 18 22 60 22 L228 22 C254 22 270 28 274 36 C270 44 254 50 228 50 L60 50 C18 50 0 46 0 36 Z"
+          fill="#1f3253" stroke="#58a6ff" stroke-opacity="0.85" stroke-width="2.2"/>
+    <!-- nose cone -->
+    <path d="M274 28 C290 30 296 33 296 36 C296 39 290 42 274 44 Z" fill="#f0883e" opacity="0.92"/>
+    <!-- windows -->
+    <g fill="#79c0ff">
+      <circle cx="206" cy="34" r="2.6" opacity="0.95"/>
+      <circle cx="220" cy="34" r="2.6" opacity="0.85"/>
+      <circle cx="234" cy="34" r="2.6" opacity="0.7"/>
+      <circle cx="248" cy="34" r="2.6" opacity="0.55"/>
+    </g>
+    <!-- cockpit window -->
+    <path d="M260 30 C268 30 272 32 272 36 L262 36 Z" fill="#79c0ff" opacity="0.5"/>
+    <!-- landing gear hint -->
+    <line x1="60" y1="50" x2="60" y2="62" stroke="#8b949e" stroke-width="2"/>
+    <line x1="200" y1="50" x2="200" y2="62" stroke="#8b949e" stroke-width="2"/>
+    <circle cx="60" cy="64" r="3.5" fill="#8b949e"/>
+    <circle cx="200" cy="64" r="3.5" fill="#8b949e"/>
+  </g>
+
+  <rect x="6" y="6" width="1168" height="228" rx="28" fill="none" stroke="#58a6ff" stroke-opacity="0.22"/>
+</svg>
